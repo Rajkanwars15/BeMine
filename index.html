@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!-- Autoplaying background music -->
+<audio id="bgMusic" autoplay loop>
+    <source src="soy.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+</audio>
+
+<!-- Main container with question and yes/no buttons -->
+<div class="container">
+    <h1>Will you be my Valentine?</h1>
+    <div id="message"></div>
+    <div class="buttons">
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+    </div>
+</div>
+
+<!-- Letter container, hidden by default -->
+<div id="letter-container" class="hidden">
+    <div id="letter">
+        <h2>I Promise...</h2>
+        <div class="heart-container">
+            <ul>
+                <li>❤️ To always check if you’ve eaten, even if it means waking you up at 8 AM to make sure you don’t skip breakfast.</li>
+                <li>💖 To listen to all your voice notes like they’re my favorite songs—even the ones where you say you sound ‘homeless’.</li>
+                <li>💕 To always remind you to carry a jacket, so you don’t get a cold after saying “Mujhe kuch nahi hota” and then eating ice cream.</li>
+                <li>💘 To be your personal clock, waking you up on time (even if I’m late sometimes 😅).</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Main script for repositioning 'No' button and event handling -->
+<script src="script.js"></script>
+</body>
+</html>

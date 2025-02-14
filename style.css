@@ -1,0 +1,154 @@
+/* ---------------------- */
+/* GLOBAL STYLES          */
+/* ---------------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* The main container with question */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    margin-top: 4rem;
+}
+
+h1 {
+    color: #e91e63;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#message {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    min-height: 1.5em;
+    color: #555;
+}
+
+.buttons {
+    margin-top: 1rem;
+    position: relative;
+}
+
+button {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#yesBtn {
+    background-color: #e91e63;
+    color: #fff;
+}
+
+#yesBtn:hover {
+    background-color: #d81b60;
+}
+
+#noBtn {
+    background-color: #fff;
+    color: #e91e63;
+    border: 2px solid #e91e63;
+    position: absolute; /* for repositioning animation */
+}
+
+/* ---------------------- */
+/* LETTER SECTION STYLES  */
+/* ---------------------- */
+
+/* .hidden ensures it won't occupy layout or appear until revealed */
+.hidden {
+    display: none;
+}
+
+#letter-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+/* By default, the letter is scaled down (closed). */
+#letter {
+    background: #fff;
+    border: 2px solid #e91e63;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: transform 0.8s ease;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    padding: 1rem;
+}
+
+/* Once shown (by removing .hidden from container),
+   we add a scaleY(1) to 'open' the letter. */
+#letter-container:not(.hidden) #letter {
+    transform: scaleY(1);
+}
+
+#letter h2 {
+    margin-top: 0.5rem;
+    color: #e91e63;
+}
+
+.heart-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.heart-container ul li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* ---------------------- */
+/* MOBILE-FRIENDLY STYLES */
+/* ---------------------- */
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem;
+        width: 95%;
+        margin-top: 2rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
+    #noBtn {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    #letter {
+        width: 90%;
+    }
+}
